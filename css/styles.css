@@ -90,10 +90,11 @@ body {
   display: block;
   content: "";
   width: 100%;
+  height: 4px;
   left: 0;
   bottom: 0;
-  border: 4px solid var(--secondary-link-color);
-  border-radius: 20px;
+  border-radius: 4px;
+  background-color: var(--secondary-link-color);
 }
 .nav-link {
   display: block;
@@ -209,6 +210,7 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.1);
+  visibility: visible;
 }
 .modal-window {
   position: absolute;
@@ -387,6 +389,10 @@ body {
 .team-section {
   background-color: #f5f4fa;
 }
+.network-container {
+  display: flex;
+  justify-content: center;
+}
 .network-list {
   display: flex;
   justify-content: space-between;
@@ -395,8 +401,6 @@ body {
   width: 206px;
   height: 44px;
   padding: 0;
-  margin-right: 32px;
-  margin-left: 32px;
 }
 .network-item {
   display: flex;
@@ -474,6 +478,7 @@ body {
   border: 1px solid transparent;
   transition: color var(--animation-webstudio),
     border var(--animation-webstudio);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -485,7 +490,6 @@ body {
   width: 106px;
   height: 60px;
   fill: currentColor;
-  transition: fill var(--animation-webstudio);
 }
 .icon-client:hover,
 .icon-client:focus {
@@ -501,7 +505,7 @@ body {
 }
 .footer-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .footer-address {
   margin-top: 20px;
@@ -551,8 +555,6 @@ body {
 .footer-head {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
-  margin-top: 12px;
 }
 .footer-text {
   margin: 0;
@@ -659,12 +661,6 @@ body {
 .project-item {
   width: 370px;
   box-sizing: border-box;
-  transition: box-shadow var(--animation-webstudio);
-}
-.project-item a:hover,
-.project-item :focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-list > .project-item:nth-child(-n + 3) {
@@ -676,6 +672,14 @@ body {
 .project-link {
   display: inherit;
   text-decoration: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0),
+    1px 4px 6px rgba(0, 0, 0, 0);
+  transition: box-shadow var(--animation-webstudio);
+}
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-animation {
   position: relative;
